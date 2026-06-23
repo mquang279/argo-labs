@@ -23,7 +23,7 @@ spec:
         tier: front
     spec:
       containers:
-        - image: docker/welcome-to-docker
+        - image: schoolofdevops/vote:v2
           name: vote
           imagePullPolicy: Always
           resources:
