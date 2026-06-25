@@ -20,7 +20,7 @@ spec:
               name: mquang279/vote
 
   writeBackConfig:
-    method: git
+    method: git:secret:argocd/git-creds
     gitConfig:
-      branch: main
+      branch: master
       writeBackTarget: kustomization:../base
