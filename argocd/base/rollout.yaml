@@ -23,7 +23,7 @@ spec:
         tier: front
     spec:
       containers:
-        - image: mquang279/vote:1d78003
+        - image: mquang279/vote
           name: vote
           imagePullPolicy: Always
           resources:

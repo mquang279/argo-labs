@@ -1,11 +1,11 @@
 apiVersion: argocd-image-updater.argoproj.io/v1alpha1
 kind: ImageUpdater
 metadata:
-  name: voting-staging
+  name: vote-staging
   namespace: argocd
 spec:
   applicationRefs:
-    - namePattern: voting-staging
+    - namePattern: vote-staging
       images:
         - alias: vote
           imageName: mquang279/vote
