@@ -1,0 +1,26 @@
+apiVersion: argocd-image-updater.argoproj.io/v1alpha1
+kind: ImageUpdater
+metadata:
+  name: voting-staging
+  namespace: argocd
+spec:
+  applicationRefs:
+    - namePattern: voting-staging
+      images:
+        - alias: vote
+          imageName: mquang279/vote
+          commonUpdateSettings:
+            updateStrategy: newest-build
+            allowTags: regexp:^[0-9a-f]{7}$
+            ignoreTags:
+              - dev
+            forceUpdate: true
+          manifestTargets:
+            kustomize:
+              name: mquang279/vote
+
+  writeBackConfig:
+    method: git
+    gitConfig:
+      branch: main
+      writeBackTarget: kustomization:../base

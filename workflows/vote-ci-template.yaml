@@ -1,7 +1,8 @@
 apiVersion: argoproj.io/v1alpha1
-kind: Workflow
+kind: WorkflowTemplate
 metadata:
-  generateName: vote-ci-
+  name: vote-ci-template
+  namespace: argo-events
 spec:
   entrypoint: main
   arguments:
