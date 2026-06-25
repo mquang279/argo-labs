@@ -6,5 +6,5 @@ resources:
   - preview-service.yaml
 images:
   - name: mquang279/vote
-    newTag: 5c5a21d
+    newTag: 0a932c0
     newName: mquang279/vote
